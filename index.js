@@ -177,7 +177,7 @@ fs.writeFile('./output/README.md',
 ${response.projectStatus}
 
 ## Description <a name = "description"></a>
-${response.title} is ${response.projectType} that ${response.projectDoes}. The aim of the project was to ${response.projectAim} Users can ${response.projectUse} The project makes use of ${response.projectTools}
+${response.title} is ${response.projectType} that ${response.projectDoes}. The aim of the project was to ${response.projectAim} Users can ${response.projectUse} The project makes use of ${response.projectTools} <br>
 ${response.deployed}
   
 ## Table of contents: 
@@ -206,6 +206,9 @@ ${response.license}
 
 ## Contributors <a name = "contributors"></a>
 ${response.contrib}
+
+## Credits <a name = "credits"></a>
+${response.credits}
 
 ## Tests <a name = "tests"></a>
 ${response.test}
