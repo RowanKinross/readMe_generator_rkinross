@@ -181,15 +181,15 @@ ${response.title} is ${response.projectType} that ${response.projectDoes} The ai
 ${response.deployed}
   
 ## Table of contents: 
-[Project Status](https://github.com/${response.github}/${response.repo}?tab=readme-ov-file#status)
-[Description](https://github.com/${response.github}/${response.repo}?tab=readme-ov-file#description)
-[Installation](https://github.com/${response.github}/${response.repo}?tab=readme-ov-file#installation)
-[Usage](https://github.com/${response.github}/${response.repo}?tab=readme-ov-file#usage)
-[Demo](https://github.com/${response.github}/${response.repo}?tab=readme-ov-file#demo)
-[License](https://github.com/${response.github}/${response.repo}?tab=readme-ov-file#license)
-[Contributors](https://github.com/${response.github}/${response.repo}?tab=readme-ov-file#contributors)
-[Credits](https://github.com/${response.github}/${response.repo}?tab=readme-ov-file#credits)
-[Tests](https://github.com/${response.github}/${response.repo}?tab=readme-ov-file#tests)
+[Project Status](https://github.com/${response.github}/${response.repo}?tab=readme-ov-file#status) <br>
+[Description](https://github.com/${response.github}/${response.repo}?tab=readme-ov-file#description) <br>
+[Installation](https://github.com/${response.github}/${response.repo}?tab=readme-ov-file#installation) <br>
+[Usage](https://github.com/${response.github}/${response.repo}?tab=readme-ov-file#usage) <br>
+[Demo](https://github.com/${response.github}/${response.repo}?tab=readme-ov-file#demo) <br>
+[License](https://github.com/${response.github}/${response.repo}?tab=readme-ov-file#license) <br>
+[Contributors](https://github.com/${response.github}/${response.repo}?tab=readme-ov-file#contributors) <br>
+[Credits](https://github.com/${response.github}/${response.repo}?tab=readme-ov-file#credits) <br>
+[Tests](https://github.com/${response.github}/${response.repo}?tab=readme-ov-file#tests) <br>
 [Questions](https://github.com/${response.github}/${response.repo}?tab=readme-ov-file#questions)
   
 ## Installation <a name = "installation"></a>
