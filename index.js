@@ -9,11 +9,21 @@ function init() {
 inquirer
   .prompt([
     {
-    //Description of the program
-    type: 'input',
-    message: 'Hello and welcome to your personal readme file creator. Please answer as fully as you can and make sure to use full-stops at the end of your answers. Great, lets get started!',
-    name: 'getStarted',
+      //Description of the program
+      type: 'input',
+      message: 'Hello and welcome to your personal readme file creator. Please answer as fully as you can and make sure to use full-stops at the end of your answers. Great, lets get started!',
+      name: 'getStarted',
     }, 
+
+
+    {
+      //Project Status
+      type: 'input',
+      message: 'Project status:',
+      name: 'projectStatus',
+    }, 
+
+
     {
   //Title (#) 
     // ask for title
@@ -60,7 +70,6 @@ inquirer
       type: 'input',
       message: 'link to deployed page (if appropriate): (else, leave blank)',
       name: 'deployed',
-      default: '',
     }, 
 
 
@@ -94,9 +103,8 @@ inquirer
       //link to screencapture or gif of demo
       {
         type: 'input',
-        message: 'Link to screencapture or demo - the relative path from where readme will be located: (if nothing, leave blank)',
+        message: 'Link to screencapture or demo - the relative path from where demo gif/image is located in the repo: (if nothing, leave blank)',
         name: 'demo',
-        default: '',
       },
 
 
@@ -118,10 +126,10 @@ inquirer
       name: 'contrib',
       default: 'n/a',
     },
-
-
+    
+    
     //## Tests
-      // Short description on testing
+    // Short description on testing
     {
       type: 'input',
       message: 'A short description on the testing: (If none, leave blank)',
@@ -129,8 +137,16 @@ inquirer
       default: 'n/a',
     },
     
+    
+    //## Credits
+    {
+    type: 'input',
+    message: 'Credits:',
+    name: 'credits',
+    }, 
+    
+
     //## Questions
-      //Enter github username
     {
       type: 'input',
       message: 'Your github username:',
@@ -157,48 +173,49 @@ const fs = require('fs');
 fs.writeFile('./output/README.md',
 `# ${response.title}
 
-## Description
-  ${response.title} is ${response.projectType} that ${response.projectDoes}. The aim of the project was to ${response.projectAim} Users can ${response.projectUse} The project makes use of ${response.projectTools}
-  ${response.deployed}
+## Project status <a name = "status"></a>
+${response.projectStatus}
+
+## Description <a name = "description"></a>
+${response.title} is ${response.projectType} that ${response.projectDoes}. The aim of the project was to ${response.projectAim} Users can ${response.projectUse} The project makes use of ${response.projectTools}
+${response.deployed}
   
-## Table of contents:
-  [Installation](https://github.com/${response.github}/${response.repo}?tab=readme-ov-file#installation)
-  [Usage](https://github.com/${response.github}/${response.repo}?tab=readme-ov-file#usage)
-  [Demo](https://github.com/${response.github}/${response.repo}?tab=readme-ov-file#demo)
-  [License](https://github.com/${response.github}/${response.repo}?tab=readme-ov-file#license)
-  [Contributors](https://github.com/${response.github}/${response.repo}?tab=readme-ov-file#contributors)
-  [Tests](https://github.com/${response.github}/${response.repo}?tab=readme-ov-file#tests)
-  [Questions](https://github.com/${response.github}/${response.repo}?tab=readme-ov-file#questions)
+## Table of contents: 
+[Project Status](https://github.com/${response.github}/${response.repo}?tab=readme-ov-file#status)
+[Description](https://github.com/${response.github}/${response.repo}?tab=readme-ov-file#description)
+[Installation](https://github.com/${response.github}/${response.repo}?tab=readme-ov-file#installation)
+[Usage](https://github.com/${response.github}/${response.repo}?tab=readme-ov-file#usage)
+[Demo](https://github.com/${response.github}/${response.repo}?tab=readme-ov-file#demo)
+[License](https://github.com/${response.github}/${response.repo}?tab=readme-ov-file#license)
+[Contributors](https://github.com/${response.github}/${response.repo}?tab=readme-ov-file#contributors)
+[Credits](https://github.com/${response.github}/${response.repo}?tab=readme-ov-file#credits)
+[Tests](https://github.com/${response.github}/${response.repo}?tab=readme-ov-file#tests)
+[Questions](https://github.com/${response.github}/${response.repo}?tab=readme-ov-file#questions)
   
-## Installation
-  ${response.install}
+## Installation <a name = "installation"></a>
+${response.install}
 
-## Usage
-  Upon opening the project, the user is ${response.usage} ${response.usageDescr}
+## Usage <a name = "usage"></a>
+Upon opening the project, the user is ${response.usage} ${response.usageDescr}
 
-## Demo
-  ![demo](${response.demo})
+## Demo <a name = "demo"></a>
+![demo](${response.demo})
 
-## License
-  ${response.license}
+## License <a name = "license"></a>
+${response.license}
 
-## Contributors
-  ${response.contrib}
+## Contributors <a name = "contributors"></a>
+${response.contrib}
 
-## Tests
-  ${response.test}
+## Tests <a name = "tests"></a>
+${response.test}
 
-## Questions
-  If you have any further questions you can find me here:
-  GitHub - https://github.com/${response.github}
-  Email - ${response.email}
-
-
-
-  `
-  , 
+## Questions <a name = "questions"></a>
+If you have any further questions you can find me here:
+GitHub - https://github.com/${response.github}
+Email - ${response.email} `, 
   
-  (err) => err ? console.error(err) : console.log('Success! We recommended that you open the generated readme (in the output folder) to check for any spelling or gramatically errors with a spell-checker, before posting to your repo.')
+  (err) => err ? console.error(err) : console.log('Success! We recommended that you open the generated readme (in the output folder) to check for any spelling or gramatical errors with a spell-checker, before posting to your repo.')
 );
 })
 }
