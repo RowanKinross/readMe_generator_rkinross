@@ -1,32 +1,43 @@
-# ReadMe Generator
+# README Generator
 
-## Project status
-Development for this project is on pause, for now.
+## Project status <a name = "status"></a>
+On pause, for now.
 
-## Description
-ReadMe Generator is an tool that takes the input from a user and uses it to generate a readMe file.
-
-https://
-
-## Visuals
-The following animation shows the appearance, usage and user interface of the application:
-
-![demo]
-
-## Installation
+## Description <a name = "description"></a>
+Generator is an application that shows this and that and blah blah blah. The aim of the project was to to complete this thing I thought of Users can take the thing I thought of and  The project makes use of sadf\uigahiugh
+https//:etcetc.com
+  
+## Table of contents: 
+[Project Status](https://github.com/RowanKinross/readMe_generator_rkinross?tab=readme-ov-file#status) <br>
+[Description](https://github.com/RowanKinross/readMe_generator_rkinross?tab=readme-ov-file#description) <br>
+[Installation](https://github.com/RowanKinross/readMe_generator_rkinross?tab=readme-ov-file#installation) <br>
+[Usage](https://github.com/RowanKinross/readMe_generator_rkinross?tab=readme-ov-file#usage) <br>
+[Demo](https://github.com/RowanKinross/readMe_generator_rkinross?tab=readme-ov-file#demo) <br>
+[License](https://github.com/RowanKinross/readMe_generator_rkinross?tab=readme-ov-file#license) <br>
+[Contributors](https://github.com/RowanKinross/readMe_generator_rkinross?tab=readme-ov-file#contributors) <br>
+[Credits](https://github.com/RowanKinross/readMe_generator_rkinross?tab=readme-ov-file#credits) <br>
+[Tests](https://github.com/RowanKinross/readMe_generator_rkinross?tab=readme-ov-file#tests) <br>
+[Questions](https://github.com/RowanKinross/readMe_generator_rkinross?tab=readme-ov-file#questions)
+  
+## Installation <a name = "installation"></a>
 n/a
 
-## Usage
+## Usage <a name = "usage"></a>
+Upon opening the project, the user is a project that I made nothing at all
 
+## Demo <a name = "demo"></a>
+![demo](../assets/images/demo)
 
-## Contributing
-As this is a personal project, designed to challenge and test my skills, I am not currently looking for contributors. However, there may be a opening for this in the future.
+## License <a name = "license"></a>
+MIT License
 
-## Credits
+## Contributors <a name = "contributors"></a>
+Jules & Neil
 
-edX challenge materials for setting the challenge and providing me with the skills to take on this project.
+## Tests <a name = "tests"></a>
+n/a
 
-## License
-
-MIT License - refer to LICENSE in the repo.
-
+## Questions <a name = "questions"></a>
+If you have any further questions you can find me here:
+GitHub - https://github.com/RowanKinross
+Email - rowan@email.com 
