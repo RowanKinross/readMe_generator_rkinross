@@ -9,6 +9,12 @@ function init() {
 inquirer
   .prompt([
     {
+    //Description of the program
+    type: 'input',
+    message: 'Hello and welcome to your personal readme file creator. Please answer as fully as you can and make sure to use full-stops at the end of your answers. Great, lets get started!',
+    name: 'getStarted',
+    }, 
+    {
   //Title (#) 
     // ask for title
       type: 'input',
@@ -50,6 +56,12 @@ inquirer
       message: 'What tools, languages or strategies did you use?',
       name: 'projectTools'
     }, 
+    {
+      type: 'input',
+      message: 'link to deployed page (if appropriate): (else, leave blank)',
+      name: 'deployed',
+      default: '',
+    }, 
 
 
     //## Installations
@@ -68,12 +80,13 @@ inquirer
         type: 'input',
         message: 'Complete the sentence: Upon opening the project, the user is...(e.g met with? prompted to? shown?)',
         name: 'usage',
-        default: 'n/a',
+        default: '',
       }, 
       {
         type: 'input',
         message: 'What else does the user then interact with? Take them through a step by step',
         name: 'usageDescr',
+        default: '',
       }, 
     
 
@@ -83,7 +96,7 @@ inquirer
         type: 'input',
         message: 'Link to screencapture or demo - the relative path from where readme will be located: (if nothing, leave blank)',
         name: 'demo',
-        default: 'n/a',
+        default: '',
       },
 
 
@@ -109,7 +122,12 @@ inquirer
 
     //## Tests
       // Short description on testing
-      //default n/a
+    {
+      type: 'input',
+      message: 'A short description on the testing: (If none, leave blank)',
+      name: 'test',
+      default: 'n/a',
+    },
     
     //## Questions
       //Enter github username
@@ -129,20 +147,19 @@ inquirer
       message: 'Your email:',
       name: 'email',
     }
-    //Once the readme is generated it is recommended to add a demo and link to a deployed application or where a user can find the product where appropriate
   ])
-
+  
 
 
 
 .then((response) => {
 const fs = require('fs');
 fs.writeFile('./output/README.md',
-`
-# ${response.title}
+`# ${response.title}
 
 ## Description
-  ${response.title} is an ${response.projectType} that ${response.projectDoes}. The aim of the project was to ${response.projectAim}. Users can ${response.projectUse}. The project makes use of ${response.projectTools}.
+  ${response.title} is ${response.projectType} that ${response.projectDoes}. The aim of the project was to ${response.projectAim} Users can ${response.projectUse} The project makes use of ${response.projectTools}
+  ${response.deployed}
   
 ## Table of contents:
   [Installation](https://github.com/${response.github}/${response.repo}?tab=readme-ov-file#installation)
@@ -154,31 +171,34 @@ fs.writeFile('./output/README.md',
   [Questions](https://github.com/${response.github}/${response.repo}?tab=readme-ov-file#questions)
   
 ## Installation
+  ${response.install}
 
 ## Usage
+  Upon opening the project, the user is ${response.usage} ${response.usageDescr}
 
 ## Demo
+  ![demo](${response.demo})
 
 ## License
+  ${response.license}
 
 ## Contributors
-    //github names if they exist + github profiles
-    //else names
+  ${response.contrib}
 
 ## Tests
+  ${response.test}
 
 ## Questions
-    //some sort of description of how to reach them with additional questions
-    // username - ${response.github}
-    // profile - https://github.com/${response.github}
-    // + email
+  If you have any further questions you can find me here:
+  GitHub - https://github.com/${response.github}
+  Email - ${response.email}
 
 
 
   `
   , 
   
-  (err) => err ? console.error(err) : console.log('Success!')
+  (err) => err ? console.error(err) : console.log('Success! We recommended that you open the generated readme (in the output folder) to check for any spelling or gramatically errors with a spell-checker, before posting to your repo.')
 );
 })
 }

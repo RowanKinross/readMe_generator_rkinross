@@ -4,6 +4,7 @@
 Development for this project is on pause, for now.
 
 ## Description
+ReadMe Generator is an tool that takes the input from a user and uses it to generate a readMe file.
 
 https://
 
@@ -27,8 +28,5 @@ edX challenge materials for setting the challenge and providing me with the skil
 
 ## License
 
-MIT License - refer to LICENSE in the repo.#ReadMe Generator
- 
-  ##Description
+MIT License - refer to LICENSE in the repo.
 
-  ReadMe Generator is an tool that takes the input from a user and uses it to generate a readMe file.
