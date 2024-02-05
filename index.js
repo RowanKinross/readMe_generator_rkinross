@@ -103,7 +103,7 @@ inquirer
       //link to screencapture or gif of demo
       {
         type: 'input',
-        message: 'Link to screencapture or demo - the relative path from where demo gif/image is located in the repo: (if nothing, leave blank)',
+        message: 'Link to screencapture or demo - the relative path from where demo gif/image is located in the repo: (e.g ./images/project_demo.png)',
         name: 'demo',
       },
 
@@ -173,15 +173,15 @@ const fs = require('fs');
 fs.writeFile('./output/README.md',
 `# ${response.title}
 
-## Project status <a name = "status"></a>
+## Project Status
 ${response.projectStatus}
 
-## Description <a name = "description"></a>
+## Description
 ${response.title} is ${response.projectType} that ${response.projectDoes} The aim of the project was to ${response.projectAim} Users can ${response.projectUse} The project makes use of ${response.projectTools} <br>
 ${response.deployed}
   
-## Table of contents
-[Project Status](https://github.com/${response.github}/${response.repo}?tab=readme-ov-file#status) <br>
+## Table of Contents
+[Project Status](https://github.com/${response.github}/${response.repo}?tab=readme-ov-file#project-status) <br>
 [Description](https://github.com/${response.github}/${response.repo}?tab=readme-ov-file#description) <br>
 [Installation](https://github.com/${response.github}/${response.repo}?tab=readme-ov-file#installation) <br>
 [Usage](https://github.com/${response.github}/${response.repo}?tab=readme-ov-file#usage) <br>
@@ -192,28 +192,28 @@ ${response.deployed}
 [Tests](https://github.com/${response.github}/${response.repo}?tab=readme-ov-file#tests) <br>
 [Questions](https://github.com/${response.github}/${response.repo}?tab=readme-ov-file#questions)
   
-## Installation <a name = "installation"></a>
+## Installation
 ${response.install}
 
-## Usage <a name = "usage"></a>
+## Usage
 Upon opening the project, the user is ${response.usage} ${response.usageDescr}
 
-## Demo <a name = "demo"></a>
+## Demo
 ![demo](${response.demo})
 
-## License <a name = "license"></a>
+## License
 ${response.license}
 
-## Contributors <a name = "contributors"></a>
+## Contributors
 ${response.contrib}
 
-## Credits <a name = "credits"></a>
+## Credits
 ${response.credits}
 
-## Tests <a name = "tests"></a>
+## Tests
 ${response.test}
 
-## Questions <a name = "questions"></a>
+## Questions
 If you have any further questions you can find me here:
 GitHub - https://github.com/${response.github}
 Email - ${response.email} `, 

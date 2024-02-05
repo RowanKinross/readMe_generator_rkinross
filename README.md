@@ -1,12 +1,12 @@
 # ReadMe Generator
 
-## Project status
+## Project Status
 Development for this project is on pause, for now.
 
 ## Description
 ReadMe Generator is a tool that takes the input from a user and uses it to generate a readMe file. The aim of the project was to make a tool which could aid a user to write a readme faster whilst limiting the chance of crucial elements being missed from the readme. Therefore saving the user time and energy to spend on the main project, but still encouraging a user to have proper documentation. Users can use their time more efficiently, hopefully enabling an even better project outcome. The project makes use of node.js, inquiry and JavaScript. <br>
  
-## Table of contents 
+## Table of Contents 
 [Project Status](https://github.com/RowanKinross/readMe_generator_rkinross?tab=readme-ov-file#project-status) <br>
 [Description](https://github.com/RowanKinross/readMe_generator_rkinross?tab=readme-ov-file#description) <br>
 [Installation](https://github.com/RowanKinross/readMe_generator_rkinross?tab=readme-ov-file#installation) <br>
